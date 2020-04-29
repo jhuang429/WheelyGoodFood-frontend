@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", e => {
                 recent.append(li)
             })
         })
-    fetch(`https://wheelygoodfoodbackend.herokuapp.com/spins/recentspins/popular`).then(resp => resp.json()).then(
+    fetch(`https://wheelygoodfoodbackend.herokuapp.com/spins/popular`).then(resp => resp.json()).then(
         content => {
             let popular = document.getElementById("popular-restaurant")
             content.forEach(restaurant => {
@@ -80,7 +80,7 @@ function postToBackEnd(form) {
 function searchBusiness(indicatedSegment) {
     let businessId = indicatedSegment.id
     let searchSelection = { id: businessId }
-    fetch(`${backend}/yelp/business`, {
+    fetch(`https://wheelygoodfoodbackend.herokuapp.com/yelp/business`, {
         method: "POST",
         headers: {
             'content-type': 'application/json',
