@@ -80,7 +80,7 @@ function postToBackEnd(form) {
 function searchBusiness(indicatedSegment) {
     let businessId = indicatedSegment.id
     let searchSelection = { id: businessId }
-    fetch(`${backend}/yelp/business`, {
+    fetch(`https://wheelygoodfoodbackend.herokuapp.com/yelp/business`, {
         method: "POST",
         headers: {
             'content-type': 'application/json',
