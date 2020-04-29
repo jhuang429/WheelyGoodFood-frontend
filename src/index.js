@@ -32,6 +32,7 @@ window.addEventListener("DOMContentLoaded", e => {
     })//end of click listener
 
 })//end of DOMcontentloaded
+
 function postToBackEnd(form) {
     let location = form.location.value
     let type = form.type.value
@@ -77,6 +78,7 @@ function postToBackEnd(form) {
         })
 
 }//end of postToBackEnd
+
 function searchBusiness(indicatedSegment) {
     let businessId = indicatedSegment.id
     let searchSelection = { id: businessId }
@@ -158,6 +160,8 @@ function searchBusiness(indicatedSegment) {
             resetWheel()
         })
 }//end of search business
+
+
 
 //helper functions
 
