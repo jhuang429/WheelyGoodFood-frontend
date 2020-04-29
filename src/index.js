@@ -1,4 +1,3 @@
-
 window.addEventListener("DOMContentLoaded", e => {
     fetch(`https://wheelygoodfoodbackend.herokuapp.com/spins/recent`).then(resp => resp.json()).then(
         content => {
@@ -8,7 +7,6 @@ window.addEventListener("DOMContentLoaded", e => {
                 li = document.createElement("li")
                 li.innerHTML = `<a href=${restaurant.url} target="_blank">${restaurant.name}</a>`
                 recent.append(li)
-
             })
         })
     fetch(`https://wheelygoodfoodbackend.herokuapp.com/spins/recentspins/popular`).then(resp => resp.json()).then(
@@ -19,7 +17,6 @@ window.addEventListener("DOMContentLoaded", e => {
                 li = document.createElement("li")
                 li.innerHTML = `<a href=${restaurant.url} target="_blank">${restaurant.name}</a> Hits: ${restaurant.spun}`
                 popular.append(li)
-
             })
         })
 
