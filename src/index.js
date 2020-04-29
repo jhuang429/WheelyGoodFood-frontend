@@ -1,8 +1,6 @@
 window.addEventListener("DOMContentLoaded", e => {
     let form = document.getElementById("form")
 
-    
-
     fetch(`https://wheelygoodfoodbackend.herokuapp.com/spins/recent`).then(resp => resp.json()).then(
         content => {
             let recent = document.getElementById("recent-restaurant")
@@ -26,7 +24,6 @@ window.addEventListener("DOMContentLoaded", e => {
 
             })
         })
-
 
     document.addEventListener("click", e => {
         switch (true) {
