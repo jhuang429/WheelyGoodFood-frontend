@@ -1,6 +1,5 @@
-window.addEventListener("DOMContentLoaded", e => {
-    let form = document.getElementById("form")
 
+window.addEventListener("DOMContentLoaded", e => {
     fetch(`https://wheelygoodfoodbackend.herokuapp.com/spins/recent`).then(resp => resp.json()).then(
         content => {
             let recent = document.getElementById("recent-restaurant")
@@ -12,7 +11,6 @@ window.addEventListener("DOMContentLoaded", e => {
 
             })
         })
-
     fetch(`https://wheelygoodfoodbackend.herokuapp.com/spins/recentspins/popular`).then(resp => resp.json()).then(
         content => {
             let popular = document.getElementById("popular-restaurant")
@@ -36,17 +34,12 @@ window.addEventListener("DOMContentLoaded", e => {
         }
     })//end of click listener
 
-
 })//end of DOMcontentloaded
-
 function postToBackEnd(form) {
-
     let location = form.location.value
     let type = form.type.value
     let price = form.price.value
-
     let newSearch = { location, type, price }
-
     fetch(`https://wheelygoodfoodbackend.herokuapp.com/yelp`, {
         method: "POST",
         headers: {
@@ -84,13 +77,9 @@ function postToBackEnd(form) {
                     'callbackFinished': alertPrize
                 }
             });
-
-
         })
 
-
 }//end of postToBackEnd
-
 function searchBusiness(indicatedSegment) {
     let businessId = indicatedSegment.id
     let searchSelection = { id: businessId }
@@ -115,8 +104,6 @@ function searchBusiness(indicatedSegment) {
             restaurant.business_info.hours[0].open.forEach(day => {
                 hours[day.day] = `${FormatTime(day.start)}-${FormatTime(day.end)}`
             })
-
-
 
             card.innerHTML = `
                 <div id="card-title">
@@ -162,7 +149,6 @@ function searchBusiness(indicatedSegment) {
                 <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=${restaurant.business_info.location.display_address}&key=AIzaSyBLJO5Se7usAdXjNZ4F6rwwV9K5xgyZNJg" allowfullscreen></iframe>
                 `
 
-
             //load thumbnails
             let thumbnails = document.getElementById('thumbnails');
             restaurant.business_info.photos.forEach(photo => {
@@ -172,9 +158,7 @@ function searchBusiness(indicatedSegment) {
                 pic.width = "100"
                 thumbnails.append(pic)
             })
-
             resetWheel()
-
         })
 }//end of search business
 
@@ -190,7 +174,6 @@ function toggleWheelAndCard() {
 function readdForm() {
     location.reload()
 }
-
 FormatTime = function (fourDigitTime) {
     var hours24 = parseInt(fourDigitTime.substring(0, 2));
     var hours = ((hours24 + 11) % 12) + 1;
@@ -199,7 +182,6 @@ FormatTime = function (fourDigitTime) {
 
     return hours + ':' + minutes + amPm;
 };
-
 
 function formatPhoneNumber(phoneNumberString) {
     var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
