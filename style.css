@@ -17,6 +17,8 @@ h3 {
 }
 
 #banner {
+  display: flex;
+  flex-direction: column;
   background-color: rgb(235, 78, 78);
   overflow: hidden;
   height: 15vh;
@@ -145,13 +147,44 @@ h3 {
 
 /* Main Content */
 
+#right-side {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+  background-color: #eeebe7;
+  flex: 1;
+  max-width: 50vw;
+}
+
 #content {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eeebe7;
-  flex: 1;
-  max-width: 50vw;
+  width: 50vw;
+  height: 80vh;
+}
+
+#footer {
+  display: flex;
+  width: 50vw;
+  height: 5vh;
+  align-items: center;
+}
+
+#footer img {
+  margin-left: 70px;
+}
+
+#copyright {
+  margin-left: 100px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#wheel-credits p {
+  margin-left: 80px;
+  font-size: 13px;
 }
 
 .search-box {
@@ -302,12 +335,12 @@ h3 {
 
 #card-overall {
   display: flex;
-  height: 75vh;
+  height: 70vh;
 }
 
 #card-images {
   flex-direction: column;
-  height: 75vh;
+  height: 70vh;
   width: 20vw;
   padding-left: 20px;
   justify-content: center;
@@ -316,9 +349,11 @@ h3 {
 
 #card-details {
   flex-direction: column;
-  height: 75vh;
+  height: 70vh;
   width: 30vw;
-  padding-right: 20px;
+  margin-right: 20px;
+  margin-left: 40px;
+
   justify-content: center;
   align-items: flex-start;
 }
@@ -350,6 +385,11 @@ h3 {
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
   font-size: 40px;
+}
+
+#card-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 #respin {
@@ -391,27 +431,27 @@ h3 {
 /* Error Page */
 
 #error-screen {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-family: Montserrat;
-    align-items: center;
-    height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: Montserrat;
+  align-items: center;
+  height: 85vh;
 }
 
 #error-screen h1 {
-    margin-top: 40px;
-    font-size: 40px;    
-    font-weight: 700;
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 #error-screen h2 {
-    margin-top: 20px;
-    font-size: 40px; 
-    font-weight: 700;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 700;
 }
 
 #error-screen img {
-    margin-top: 60px;
-    margin-bottom: 80px;
+  margin-top: 60px;
+  margin-bottom: 80px;
 }

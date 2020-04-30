@@ -51,18 +51,18 @@ function postToBackEnd(form) {
   })
     .then((response) => response.json())
     .then((search) => {
-        console.log(search)
+      console.log(search);
       if (search.errors || search.length === 0) {
-        let content = document.getElementById("content")
-        let error = document.createElement("div")
-        error.id = "error-screen"
+        let content = document.getElementById("content");
+        let error = document.createElement("div");
+        error.id = "error-screen";
         error.innerHTML = `
             <h1>No Restaurants Found</h1>
             <h2>Please Try Again</h2>
             <img src="./images/hungry_man.svg" alt="error" height="300px" width="150px"/>
             <button id="re-search" onclick="readdForm()">Search Again</button>
-        `
-        content.append(error)
+        `;
+        content.append(error);
       } else {
         for (i = 0; i < search.length; i++) {
           //check if restaurant name is over 15 chars
@@ -175,9 +175,11 @@ function searchBusiness(indicatedSegment) {
                         <tr><th>Friday</th><td>${hours[4]}</td></tr>
                         <tr><th>Saturday</th><td>${hours[5]}</td></tr>
                         </table>
-                
-                        <button id="respin" onclick="toggleWheelAndCard()">Respin Wheel</button>
-                        <button id="re-search" onclick="readdForm()">Search Again</button>
+
+                        <div id="card-buttons">
+                          <button id="respin" onclick="toggleWheelAndCard()">Respin Wheel</button>
+                          <button id="re-search" onclick="readdForm()">Search Again</button>
+                        </div>
 
                     </div>
 
@@ -215,14 +217,14 @@ function readdForm() {
   location.reload();
 }
 
-function formatTime (fourDigitTime) {
+function formatTime(fourDigitTime) {
   var hours24 = parseInt(fourDigitTime.substring(0, 2));
   var hours = ((hours24 + 11) % 12) + 1;
   var amPm = hours24 > 11 ? "pm" : "am";
   var minutes = fourDigitTime.substring(2);
 
   return hours + ":" + minutes + amPm;
-};
+}
 
 function formatPhoneNumber(phoneNumberString) {
   var cleaned = ("" + phoneNumberString).replace(/\D/g, "");
