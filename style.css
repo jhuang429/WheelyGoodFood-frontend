@@ -63,6 +63,16 @@ h3 {
   max-width: 15vw;
 }
 
+#created-by a {
+  text-decoration: none;
+  color: #4A5068;
+}
+
+#created-by a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 #recent {
   height: 42.5vh;
   padding: 20px;
@@ -193,6 +203,16 @@ h3 {
 #wheel-credits p {
   margin-left: 80px;
   font-size: 13px;
+}
+
+#wheel-credits a {
+  text-decoration: none;
+  color: #4A5068;
+}
+
+#wheel-credits a:hover {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .search-box {
