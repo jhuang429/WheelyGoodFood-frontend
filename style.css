@@ -63,14 +63,22 @@ h3 {
   max-width: 15vw;
 }
 
-#left-side #recent {
+#recent {
   height: 42.5vh;
   padding: 20px;
   text-align: center;
   list-style-type: none;
 }
 
-#left-side #popular {
+#recent a {
+  color: rgb(66, 78, 118)
+}
+
+#popular a {
+  color: rgb(66, 78, 118)
+}
+
+#popular {
   height: 42.5vh;
   padding: 20px;
   text-align: center;
@@ -152,7 +160,7 @@ h3 {
   /* justify-content: center;
   align-items: center; */
   flex-direction: column;
-  background-color: #eeebe7;
+  background-color: #f4f1de;
   flex: 1;
   max-width: 50vw;
 }
@@ -333,6 +341,14 @@ h3 {
   padding-bottom: none;
 }
 
+#card-title a {
+  color: #4A5068
+}
+
+#card-title a:hover {
+  color: #FFFFFF
+}
+
 #card-overall {
   display: flex;
   height: 70vh;
@@ -341,18 +357,23 @@ h3 {
 #card-images {
   flex-direction: column;
   height: 70vh;
-  width: 20vw;
+  width: 25vw;
   padding-left: 20px;
   justify-content: center;
   align-items: flex-start;
 }
 
+#card-images img {
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(223, 220, 220);
+}
+
 #card-details {
   flex-direction: column;
   height: 70vh;
-  width: 30vw;
+  width: 25vw;
   margin-right: 20px;
-  margin-left: 40px;
+  margin-left: 80px;
 
   justify-content: center;
   align-items: flex-start;
@@ -387,9 +408,14 @@ h3 {
   font-size: 40px;
 }
 
-#card-buttons {
+#thumbnails {
   display: flex;
   justify-content: space-between;
+}
+
+#card-buttons {
+  display: flex;
+  margin-top: 20px;
 }
 
 #respin {
@@ -412,6 +438,7 @@ h3 {
   border-radius: 6px;
   display: inline-block;
   transition: all 0.3s ease 0s;
+  margin-left: 120px;
 }
 
 #respin:hover {

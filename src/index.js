@@ -141,7 +141,7 @@ function searchBusiness(indicatedSegment) {
                     <div id="card-images">
                         <img src=${
                           restaurant.business_info.image_url
-                        } width="300" height="300"><br><br>
+                        } width="380" height="380"><br><br>
                         <div id="thumbnails"></div>
                     </div>
 
@@ -196,8 +196,8 @@ function searchBusiness(indicatedSegment) {
       restaurant.business_info.photos.forEach((photo) => {
         let pic = document.createElement("img");
         pic.src = photo;
-        pic.height = "100";
-        pic.width = "100";
+        pic.height = "125";
+        pic.width = "125";
         thumbnails.append(pic);
       });
       resetWheel();
