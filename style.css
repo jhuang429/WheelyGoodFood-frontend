@@ -10,11 +10,11 @@ body {
 
 /* Banner */
 
-h1,
+/* h1,
 h2,
 h3 {
   padding-bottom: 20px;
-}
+} */
 
 #banner {
   display: flex;
