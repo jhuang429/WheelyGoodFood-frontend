@@ -1,6 +1,6 @@
 # WHEELYGOODFOOD
 
-WheelyGoodFood is a web application to help users generate a random restuarant, for those times you just can't decide, based on input parameters, such as location, price, and type of food.
+Web application to help users generate a random restaurant based on input parameters, such as location, price, and type of food.
 
 ## Installation
 
